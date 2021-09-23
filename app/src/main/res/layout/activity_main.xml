@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <SeekBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/seek_bar_red"
+        android:progressTint="#f00"
+        android:thumbTint="#f00"
+        android:layout_marginTop="10sp"
+        android:layout_marginBottom="5sp"
+        android:max="255"
+        android:min="0"
+        />
+
+    <SeekBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/seek_bar_green"
+        android:layout_below="@+id/seek_bar_red"
+        android:progressTint="#0f0"
+        android:thumbTint="#0f0"
+        android:layout_marginTop="5sp"
+        android:layout_marginBottom="5sp"
+        android:max="255"
+        android:min="0"
+        />
+
+    <SeekBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/seek_bar_blue"
+        android:layout_below="@+id/seek_bar_green"
+        android:progressTint="#00f"
+        android:thumbTint="#00f"
+        android:layout_marginTop="5sp"
+        android:layout_marginBottom="10sp"
+        android:max="255"
+        android:min="0"
+        />
+
+    <RelativeLayout
+        android:id="@+id/color_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/seek_bar_blue"
+        android:background="@color/black"
+        >
+
+        <TextView
+            android:id="@+id/color_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="(0,0,0)"
+            android:textSize="30sp"
+            android:textColor="@color/white"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="200sp"
+            />
+
+    </RelativeLayout>
+
+</RelativeLayout>
